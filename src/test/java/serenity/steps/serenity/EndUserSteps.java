@@ -1,19 +1,23 @@
-package serenity.steps.serenity.;
+package serenity.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
 import serenity.pages.AdderPage;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasItem;
-import org.junit.Assert;
+import static org.junit.Assert.assertThat;
 
 public class EndUserSteps {
 
     AdderPage adderPage;
 
     @Step
-    public void enters(String keyword) {
-        adderPage.changed(keyword);
+    public void enters(String number) {
+        adderPage.changed(number);
+    }
+
+    @Step
+    public void changed(String number) {
+        adderPage.changed(number);
     }
 
     @Step

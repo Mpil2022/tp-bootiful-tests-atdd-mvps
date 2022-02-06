@@ -1,4 +1,10 @@
-package serenity.steps.serenity.;
+package serenity.steps;
+
+import net.thucydides.core.annotations.Steps;
+import org.jbehave.core.annotations.Given;
+import org.jbehave.core.annotations.Then;
+import org.jbehave.core.annotations.When;
+import serenity.steps.serenity.EndUserSteps;
 
 public class AdderSteps {
     
@@ -12,7 +18,7 @@ public class AdderSteps {
 
     @When("the user enter a number '$number'")
     public void whenTheUserEnteraNumber(String number) {
-        endUser.looks_for(number);
+        endUser.changed(number);
     }
 
     @Then("they should see the result '$number'")
