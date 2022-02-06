@@ -1,10 +1,11 @@
 package serenity.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
+import org.junit.Test;
 import serenity.pages.AdderPage;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasItem;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertEquals;
 
 public class EndUserSteps {
 
@@ -25,9 +26,9 @@ public class EndUserSteps {
         adderPage.clicked();
     }
 
-    @Step
+    @Test
     public void should_see_number(String number) {
-        assertThat(adderPage.getResult(), hasItem(containsString(number)));
+        assertEquals(adderPage.getResult(), hasItem(containsString(number)));
     }
 
     @Step
