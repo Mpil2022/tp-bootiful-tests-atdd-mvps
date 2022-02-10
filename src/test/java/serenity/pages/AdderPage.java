@@ -15,7 +15,7 @@ public class AdderPage extends PageObject{
     @FindBy(name="buttonadder")
     private WebElementFacade buttonadder;
 
-    public void changed(String keyword) {
+    public void typed(String keyword) {
         inputadder.type(keyword);
     }
 

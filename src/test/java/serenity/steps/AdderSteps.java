@@ -18,7 +18,7 @@ public class AdderSteps {
 
     @When("the user enter a number '$number'")
     public void whenTheUserEnteraNumber(String number) {
-        endUser.changed(number);
+        endUser.enters(number);
     }
 
     @Then("they should see the result '$number'")

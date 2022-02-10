@@ -12,27 +12,23 @@ public class EndUserSteps {
     AdderPage adderPage;
 
     @Step
+    public void is_the_home_page() {
+        adderPage.open();
+    }
+
+    @Step
     public void enters(String number) {
-        adderPage.changed(number);
+        adderPage.typed(number);
     }
 
     @Step
-    public void changed(String number) {
-        adderPage.changed(number);
-    }
-
-    @Step
-    public void add() {
+    public void adds() {
         adderPage.clicked();
     }
 
     @Test
     public void should_see_number(String number) {
-        assertEquals(adderPage.getResult(), hasItem(containsString(number)));
-    }
-
-    @Step
-    public void is_the_home_page() {
-        adderPage.open();
+        adds();
+        assertEquals(adderPage.getResult(), number);
     }
 }

@@ -11,6 +11,6 @@ public class AcceptanceTestSuite extends SerenityStories {
     // rule {
     @Rule
     public GenericContainer redis = new GenericContainer(DockerImageName.parse("redis:5.0.3-alpine"))
-            .withExposedPorts(8081);
+            .withExposedPorts(49153);
     // }
 }
